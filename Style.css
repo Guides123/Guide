@@ -1,0 +1,151 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Fruktur', cursive;
+}
+
+section{
+	padding: 40px;
+	background: #000;
+}
+
+section h1{
+	padding-bottom:30px;
+	font-size: 00px;
+	color: #fff;
+	text-align: left;
+}
+
+section p{
+	font-size: 25px;
+	color: #fff;
+	text-align: center;
+}
+
+::-webkit-scrollbar{
+	width: 0px;
+}
+
+#scrollPath{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 100vh;
+	background: rgba(255,255,255,0.05);
+}
+
+#progressbar{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 7px;
+	background: linear-gradient(to top,#008aff,#00ffe7);
+	animation: animate 5s linear infinite;
+	border-radius: 5px;
+}
+
+@keyframes animate{
+	0%,100%{
+		filter: hue-rotate(0deg);
+	}
+	50%{
+		filter: hue-rotate(360deg);
+	}
+}
+
+#progressbar:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top,#008aff,#00ffe7);
+	filter: blur(10px);
+}
+
+#progressbar:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top,#008aff,#00ffe7);
+	filter: blur(30px);
+}
+
+.glow {
+  font-size: 100px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  letter-spacing: 3px;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #009650, 0 0 30px #009650, 0 0 40px #009650, 0 0 50px #009650, 0 0 60px #009650, 0 0 70px #009650;
+  }
+  
+  to {
+    text-shadow: 0 0 0px #000, 0 0 10px #fff, 0 0 20px #009688, 0 0 30px #009688, 0 0 40px #009688, 0 0 50px #009688, 0 0 60px #009688, 0 0 70px #0096888;
+  }
+}
+
+#sideNav{
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	right: -100%;
+	top: 0;
+	background: rgba(0,0,0,0.9);
+	z-index: 2;
+	transition: 0.5s;
+}
+
+nav ul li{
+	list-style: none;
+	margin: 50px 20px;
+	text-align: center;
+	opacity: 1;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 30px;
+	font-weight: bolder;
+	transition: 0.3s;
+}
+
+#menubtn{
+	width: 50px;
+	height: 50px;
+	background: #009688;
+	text-align: center;
+	position: fixed;
+	right: 30px;
+	top: 20px;
+	border-radius: 3px;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#menubtn img{
+	width: 30px;
+	margin-top: 10px;
+}
+
+nav ul li a:hover{
+	margin: 10px;
+	padding: 10px;
+	letter-spacing: 5px;
+	transition: 0.3s;
+	font-size: 35px;
+	border: 3px solid;
+	border-radius: 10px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #009650, 0 0 30px #009650, 0 0 40px #009650, 0 0 50px #009650, 0 0 60px #009650, 0 0 70px #009650;
+  }
+}
